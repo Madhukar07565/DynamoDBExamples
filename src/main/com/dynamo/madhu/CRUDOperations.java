@@ -1,3 +1,6 @@
+/**
+ * 
+ */
 package com.dynamo.madhu;
 
 import java.io.File;
@@ -25,13 +28,17 @@ import com.amazonaws.services.dynamodbv2.model.UpdateItemRequest;
 import com.amazonaws.services.dynamodbv2.model.UpdateItemResult;
 import com.amazonaws.services.dynamodbv2.util.Tables;
 
-public class LoadData {
+/**
+ * @author madhukar
+ *
+ */
+public class CRUDOperations {
 
     private static AmazonDynamoDBClient dynamoDB;
 
     private static void init() throws Exception {
 
-        File file = new File("D:/Personal/workspace/DynamoDBExamples/src/com/dynamo/madhu/AwsCredential.properties");
+        File file = new File("src/resources/AwsCredential.properties");
         AWSCredentials credentials = new PropertiesCredentials(file);
 
         dynamoDB = new AmazonDynamoDBClient(credentials);
